@@ -8,31 +8,29 @@
 
 <body>	
 	<script>
-function secondHighest(arr) {
+		function secondHighest(arr) {
 			//Write your code here
-    if (arr.length <= 1 || new Set(arr).size === 1) {
-        return -Infinity;
-    }
+            if (arr.length <= 1 || new Set(arr).size === 1) {
+                return -Infinity;
+            }
 
-    let max = -Infinity;
-    let secondMax = -Infinity;
+            let max = -Infinity;
+            let secondMax = -Infinity;
 
-    for (let num of arr) {
-        if (num > max) {
-            secondMax = max;
-            max = num;
-        } else if (num > secondMax && num < max) {
-            secondMax = num;
-        }
-    }
+            for (let num of arr) {
+                if (num > max) {
+                   secondMax = max;
+                   max = num;
+                } else if (num > secondMax && num < max) {
+                   secondMax = num;
+                }
+            }
 
-    return secondMax;
+            return secondMax;
 }
 
+
 		
-			
-
-
 		function Main() {
 			//var n = prompt("Enter the number of elements");
 			var arr = [];
